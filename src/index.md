@@ -4,12 +4,14 @@ author:
   twitter: poshaughnessy
   url: http://peteroshaughnessy.com
 output: build/index.html
-styles: styles.css
+style: styles.css
 controls: false
 
 --
 
 # Bluetooth for Web Developers
+
+## Programming flying robots with JavaScript
 
 --
 
