@@ -207,7 +207,6 @@ body {
   font-size: 200%;
   font-weight: 200;
   line-height: 1.375;
-  overflow: hidden;
 }
 
 .media-container img {
@@ -285,7 +284,7 @@ h2 {
   margin: 0.5em 0;
   font-size: 140%;
   font-weight: 200;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 h2.vertical-center {
@@ -297,14 +296,22 @@ h2.vertical-center {
 h3 {
   margin: 0.5em 0;
   font-size: 140%;
-  line-height: 1.2;
+  font-weight: 200;
+  line-height: 1.4;
   border-bottom: none;
 }
 
 ul {
-  padding: 20px 0 0 60px;
+  padding-left: 45px;
   font-weight: 200;
-  line-height: 1.375;
+  line-height: 1.4;
+  font-size: 1.15em;
+  display: inline-block;
+}
+
+li {
+  text-align: left;
+  margin-bottom: 0.5em;
 }
 
 blockquote {

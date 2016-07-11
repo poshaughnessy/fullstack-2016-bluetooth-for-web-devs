@@ -46,3 +46,29 @@ controls: false
 
 <p class="media-container fill-h">![ByBox](images/bybox-stockonnect.gif)</p>
 <p class="caption">[ByBox Stockonnect](https://www.bybox.com/)</p>
+
+--
+
+## Bluetooth Low Energy
+
+![BLE](images/ble-phone.png)
+
+--
+
+<img src="images/ble-logo.png" alt="BLE logo" width="100px"/>
+
+* Can constantly advertise presence
+* And last years on batteries
+* < 100 kbps throughput (vs 2 Mbps)
+
+--
+
+### JavaScript-friendly options
+
+* Cordova
+* React Native
+* Web Bluetooth
+
+
+
+
