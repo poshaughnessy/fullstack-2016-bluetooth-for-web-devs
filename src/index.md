@@ -21,4 +21,6 @@ controls: false
 
 --
 
+![Anki Drive](images/anki-drive.gif)
 
+<p class="caption">anki.com</p>

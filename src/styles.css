@@ -380,6 +380,10 @@ table th {
   display: none;
 }
 
+.caption {
+  font-size: 0.8em;
+}
+
 /* Code Highlighting */
 code {
   padding: .1em .35em;
