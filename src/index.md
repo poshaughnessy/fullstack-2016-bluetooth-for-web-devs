@@ -9,9 +9,11 @@ controls: false
 
 --
 
-# Bluetooth for Web Developers
+# Bluetooth for <br> Web Developers
 
-## Programming flying robots with JavaScript
+### Programming flying robots with JavaScript
+
+@poshaughnessy
 
 --
 

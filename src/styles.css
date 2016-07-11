@@ -177,31 +177,6 @@ body {
   background-color: #191919;
 }
 
-/* Custom Slide Styles */
-#slide-1 {
-  background: #222 center center no-repeat;
-  background-size: cover;
-  color: #fafafa;
-}
-
-#slide-1 h1 {
-  text-shadow: 1px 2px 4px #191919;
-}
-
-#slide-1 p {
-  text-shadow: 1px 1px 1px #191919;
-}
-
-.center {
-  text-align: center;
-}
-
-img.badge {
-  height: 128px;
-  width: 128px !important;
-  border-radius: 50% !important;
-}
-
 /* Presentation Styles */
 .slide {
   position: absolute;
@@ -281,26 +256,27 @@ h3 {
 }
 
 h1 {
-  margin: 50px 0 20px;
+  margin: 1em 0;
   font-size: 200%;
   text-align: center;
   line-height: 1.2;
 }
 
 h2 {
-  margin: 5px 0;
-  font-size: 100%;
+  margin: 0.5em 0;
+  font-size: 140%;
   font-weight: 200;
   text-align: center;
   line-height: 1.2;
+  padding-bottom: 15px;
+  border-bottom: 2px ridge #fafafa;
 }
 
 h3 {
-  margin: 0;
-  padding-bottom: 15px;
+  margin: 0.5em 0;
   font-size: 140%;
   line-height: 1.2;
-  border-bottom: 2px ridge #fafafa;
+  border-bottom: none;
 }
 
 ul {
@@ -364,7 +340,7 @@ blockquote p {
 
 a {
   text-decoration: none;
-  color: #66d9ef;
+  color: #4db6ca;
 }
 
 a:hover {
@@ -412,7 +388,7 @@ table th {
 /* Code Highlighting */
 code {
   padding: .1em .35em;
-  font-family: 'Fira Mono';
+  font-family: 'Fira Mono', Courier, sans-serif;
   color: #fafafa;
   background-color: #272822;
   border-radius: 3px;
@@ -421,7 +397,7 @@ code {
 pre code {
   display: block;
   padding: .5em;
-  font-family: 'Fira Mono';
+  font-family: 'Fira Mono', Courier, sans-serif;
   font-weight: 400;
   overflow-y: hidden;
   background: #272822;
@@ -636,4 +612,35 @@ pre .xml .cdata {
     /* 2 slides per page */
     page-break-before: always;
   }
+}
+
+/* Custom Slide Styles */
+#slide-1 {
+  background: #222 center center no-repeat;
+  background-size: cover;
+  color: #fafafa;
+  text-align: center;
+}
+
+#slide-1 h1 {
+  text-shadow: 1px 2px 4px #191919;
+}
+
+#slide-1 h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+#slide-1 p {
+  text-shadow: 1px 1px 1px #191919;
+}
+
+.center {
+  text-align: center;
+}
+
+img.badge {
+  height: 128px;
+  width: 128px !important;
+  border-radius: 50% !important;
 }
