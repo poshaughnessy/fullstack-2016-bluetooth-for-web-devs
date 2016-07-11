@@ -1,8 +1,7 @@
 title: Bluetooth for Web Developers
 author:
-  name: Peter O'Shaughnessy
+  name: Thank you.
   twitter: poshaughnessy
-  url: http://peteroshaughnessy.com
 output: build/index.html
 style: styles.css
 controls: false
@@ -25,17 +24,17 @@ controls: false
 
 --
 
-<p class="media-container fill">![Anki Overdrive](images/anki-overdrive.gif)</p>
+<p class="media-container fill-h">![Anki Overdrive](images/anki-overdrive.gif)</p>
 <p class="caption">[Anki Overdrive](https://anki.com)</p>
 
 --
 
-<p class="media-container fill"><iframe src="https://www.youtube.com/embed/-Y77cUI_z30" frameborder="0" allowfullscreen></iframe></p>
+<p class="media-container fill-w fill-h"><iframe src="https://www.youtube.com/embed/-Y77cUI_z30" frameborder="0" allowfullscreen></iframe></p>
 <p class="caption">[Physical Web lost dog demo](https://youtu.be/-Y77cUI_z30)</p>
 
 --
 
-<p class="media-container fill"><iframe width="560" height="315" src="https://www.youtube.com/embed/b0GDk-53fTo" frameborder="0" allowfullscreen></iframe></p>
+<p class="media-container fill-w fill-h"><iframe width="560" height="315" src="https://www.youtube.com/embed/b0GDk-53fTo" frameborder="0" allowfullscreen></iframe></p>
 <p class="caption">[Physical Web restaurant buzzer](https://youtu.be/b0GDk-53fTo)</p>
 
 --
@@ -44,3 +43,6 @@ controls: false
 <p class="caption">[Pokemon Go Plus watch](http://www.pokemongo.com/en-us/pokemon-go-plus/)</p>
 
 --
+
+<p class="media-container fill-h">![ByBox](images/bybox-stockonnect.gif)</p>
+<p class="caption">[ByBox Stockonnect](https://www.bybox.com/)</p>

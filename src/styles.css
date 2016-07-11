@@ -215,8 +215,11 @@ body {
   max-height: 100%;
 }
 
-.fill > * {
+.fill-w > * {
   width: 100%;
+}
+
+.fill-h > * {
   height: 100%;
 }
 
@@ -327,6 +330,14 @@ blockquote p {
   width: 48%;
 }
 
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
 .author h1 {
   margin-bottom: 30px;
   font-size: 170%;
@@ -406,7 +417,8 @@ table th {
 }
 
 .caption {
-  font-size: 0.8em;
+  font-size: 0.7em;
+  margin-top: 0.5em;
 }
 
 /* Code Highlighting */
