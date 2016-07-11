@@ -535,6 +535,14 @@ body {
   text-align: center;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* Presentation Styles */
 .slide {
   position: absolute;
@@ -542,7 +550,10 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 100px;
+  padding: 10%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .slide-content {
@@ -557,8 +568,8 @@ body {
 }
 
 .slide-content img {
-  width: 100%;
-  border-radius: 3px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .controls {
@@ -688,6 +699,15 @@ blockquote p {
   justify-content: center;
   height: 100%;
   margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.image-container {
+  height: -webkit-calc(100% - 1em);
+  height: calc(100% - 1em);
 }
 
 a {
@@ -865,111 +885,6 @@ pre .xml .cdata {
   opacity: .5;
 }
 
-/* Responsiveness */
-
-@media (max-width: 850px) {
-
-  body {
-    font-size: 70%;
-  }
-
-  .slide-content {
-    width: auto;
-  }
-
-  img {
-    width: 100%;
-    border-radius: 3px;
-  }
-
-  h1 {
-    margin-top: 120px;
-  }
-
-  .prev,
-  .prev:hover {
-    border-right-color: rgba(135, 135, 135, .5);
-  }
-
-  .next,
-  .next:hover {
-    border-left-color: rgba(135, 135, 135, .5);
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    overflow: hidden;
-    font-size: 50%;
-  }
-
-  .slide-content {
-    height: 340px;
-    padding: 10px;
-    margin-top: 10px;
-  }
-
-  h1 {
-    margin-top: 50px;
-  }
-
-  ul {
-    padding-left: 25px;
-  }
-}
-
-@media print {
-  * {
-    -webkit-print-color-adjust: exact;
-  }
-
-  @page {
-    size: letter;
-  }
-
-  .hidden {
-    display: inline;
-  }
-
-  html {
-    height: 100%;
-    width: 100%;
-    overflow: visible;
-  }
-
-  body {
-    float: none !important;
-    padding: 0;
-    margin: 0 auto !important;
-    overflow: visible;
-    font-size: 52%;
-    background: none !important;
-    border: 0;
-  }
-
-  .progress,
-  .controls {
-    display: none;
-  }
-
-  .slide {
-    position: static;
-  }
-
-  .slide-content {
-    margin-top: 0;
-    margin-bottom: 40px;
-    height: 3.5in;
-    overflow: visible;
-    border: 1px solid #222;
-  }
-
-  .slide:nth-child(even) {
-    /* 2 slides per page */
-    page-break-before: always;
-  }
-}
-
   </style>
 </head>
 <body>
@@ -990,7 +905,15 @@ pre .xml .cdata {
     <section class="slide-content"><p><img src="images/anki-drive.gif" alt="Anki Drive"></p>
 <p class="caption">anki.com</p></section>
   </div>
-  <div class="slide hidden author-slide" id="slide-4">
+  <div class="slide hidden" id="slide-4">
+    <section class="slide-content"><p class="image-container"><img src="images/pokemon-go-smartwatch.jpg" alt="Pokemon Go Plus watch"></p>
+
+<p class="caption">Pokemon Go Plus watch</p></section>
+  </div>
+  <div class="slide hidden" id="slide-5">
+    <section class="slide-content"></section>
+  </div>
+  <div class="slide hidden author-slide" id="slide-6">
     <section class="slide-content"><div class="author">
   <h1 class="name">Peter O&#39;Shaughnessy</h1>
     <h3 class="twitter">

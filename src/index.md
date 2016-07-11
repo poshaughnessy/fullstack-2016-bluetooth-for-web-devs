@@ -24,3 +24,11 @@ controls: false
 ![Anki Drive](images/anki-drive.gif)
 
 <p class="caption">anki.com</p>
+
+--
+
+<p class="image-container">![Pokemon Go Plus watch](images/pokemon-go-smartwatch.jpg)</p>
+
+<p class="caption">Pokemon Go Plus watch</p>
+
+--
