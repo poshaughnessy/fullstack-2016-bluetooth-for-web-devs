@@ -69,6 +69,18 @@ controls: false
 * React Native
 * Web Bluetooth
 
+--
+
+## Cordova
+
+--
+
+## React Native
+
+--
+
+## Web Bluetooth
+
 
 
 
