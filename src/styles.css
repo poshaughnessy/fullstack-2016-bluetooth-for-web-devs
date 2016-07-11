@@ -175,6 +175,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
   background-color: #191919;
+  text-align: center;
 }
 
 /* Presentation Styles */
@@ -256,9 +257,8 @@ h3 {
 }
 
 h1 {
-  margin: 1em 0;
-  font-size: 200%;
-  text-align: center;
+  margin: 0.5em 0;
+  font-size: 250%;
   line-height: 1.2;
 }
 
@@ -266,10 +266,13 @@ h2 {
   margin: 0.5em 0;
   font-size: 140%;
   font-weight: 200;
-  text-align: center;
   line-height: 1.2;
-  padding-bottom: 15px;
-  border-bottom: 2px ridge #fafafa;
+}
+
+h2.vertical-center {
+  font-size: 180%;
+  position: relative;
+  top: -0.5em;
 }
 
 h3 {
@@ -322,20 +325,12 @@ blockquote p {
   border: none;
 }
 
-.author h3.twitter::before {
-  content: 'Twitter: ';
-}
-
-.author h3.github::before {
-  content: 'Github: ';
-}
-
-.author h3.email::before {
-  content: 'Email: ';
-}
-
-.author h3.url::before {
-  content: 'Web: ';
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 
 a {
@@ -612,35 +607,4 @@ pre .xml .cdata {
     /* 2 slides per page */
     page-break-before: always;
   }
-}
-
-/* Custom Slide Styles */
-#slide-1 {
-  background: #222 center center no-repeat;
-  background-size: cover;
-  color: #fafafa;
-  text-align: center;
-}
-
-#slide-1 h1 {
-  text-shadow: 1px 2px 4px #191919;
-}
-
-#slide-1 h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-}
-
-#slide-1 p {
-  text-shadow: 1px 1px 1px #191919;
-}
-
-.center {
-  text-align: center;
-}
-
-img.badge {
-  height: 128px;
-  width: 128px !important;
-  border-radius: 50% !important;
 }

@@ -17,4 +17,8 @@ controls: false
 
 --
 
-foo bar
+<h2 class="vertical-center">The physical world is becoming an extension of your smartphone</h2>
+
+--
+
+
