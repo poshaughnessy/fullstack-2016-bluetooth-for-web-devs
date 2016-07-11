@@ -55,7 +55,7 @@ controls: false
 
 --
 
-<img src="images/ble-logo.png" alt="BLE logo" width="100px"/>
+<img src="images/ble-logo.png" alt="BLE logo" class="w-200"/>
 
 * Can constantly advertise presence
 * And last years on batteries
@@ -63,7 +63,7 @@ controls: false
 
 --
 
-### JavaScript-friendly options
+## JavaScript-friendly options
 
 * Cordova
 * React Native
@@ -77,6 +77,10 @@ controls: false
 
 --
 
+## cordova-plugin-ble-central
+
+--
+
 ## React Native
 
 ![React Native](images/react-logo.png)
@@ -85,6 +89,6 @@ controls: false
 
 ## Web Bluetooth
 
-<img src="images/ble-logo.png" alt="BLE logo" width="300px"/>
+<img src="images/ble-logo.png" alt="BLE logo" class="w-300"/>
 
 
