@@ -1,0 +1,15 @@
+{
+  "name": "full-stack-2016-bluetooth-for-web-devs",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "watch 'npm run build && npm run serve' src",
+    "serve": "node devServer",
+    "build": "cleaver src/index.md && echo 'Finished cleaver build'"
+  },
+  "devDependencies": {
+    "cleaver": "^0.8.2",
+    "express": "^4.14.0",
+    "watch": "^0.17.1"
+  }
+}
