@@ -5,10 +5,10 @@ const PORT = process.env.PORT || 9000;
 
 let app = express();
 
-app.use( '/', express.static('build') );
+app.use( '/', express.static('public') );
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/build/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.use((req, res) => {

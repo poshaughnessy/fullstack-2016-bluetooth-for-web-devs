@@ -2,7 +2,7 @@ title: Bluetooth for Web Developers
 author:
   name: Thank you.
   twitter: poshaughnessy
-output: build/index.html
+output: public/index.html
 style: styles.css
 controls: false
 
@@ -12,7 +12,7 @@ controls: false
 
 ### Programming flying robots with JavaScript
 
-@poshaughnessy
+[@poshaughnessy](https://twitter.com/poshaughnessy)
 
 --
 
@@ -20,7 +20,7 @@ controls: false
 
 --
 
-<h2 class="vertical-center">...And your smartphone is at the centre.</h2>
+<h2 class="vertical-center">...And your smartphone <br> is at the centre.</h2>
 
 --
 
