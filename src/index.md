@@ -73,14 +73,18 @@ controls: false
 
 ## Cordova
 
+![Cordova](images/cordova-logo.png)
+
 --
 
 ## React Native
+
+![React Native](images/react-logo.png)
 
 --
 
 ## Web Bluetooth
 
-
+<img src="images/ble-logo.png" alt="BLE logo" width="300px"/>
 
 
