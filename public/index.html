@@ -550,7 +550,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 8%;
+  padding: 10%;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -672,7 +672,7 @@ h3 {
 
 ul {
   margin: 0;
-  padding-left: 45px;
+  padding: 0 45px 0 0;
   font-weight: 200;
   line-height: 1.4;
   font-size: 1.15em;
@@ -682,6 +682,10 @@ ul {
 li {
   text-align: left;
   margin-bottom: 0.5em;
+}
+
+.long-list li {
+  margin-bottom: 0.1em;
 }
 
 blockquote {
@@ -742,8 +746,8 @@ p {
 }
 
 .media-container {
-  height: -webkit-calc(100% - 1.2em);
-  height: calc(100% - 1.2em);
+  height: -webkit-calc(100% - 1.3em);
+  height: calc(100% - 1.3em);
 }
 
 a {
@@ -959,7 +963,7 @@ pre .xml .cdata {
   </div>
   <div class="slide hidden" id="slide-8">
     <section class="slide-content"><p class="media-container fill-h"><img src="images/bybox-stockonnect.gif" alt="ByBox"></p>
-<p class="caption"><a href="https://www.bybox.com/">ByBox Stockonnect</a></p></section>
+<p class="caption"><a href="https://www.bybox.com/">ByBox Stockonnect, with help from pebble {code}</a></p></section>
   </div>
   <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h2 id="bluetooth-low-energy">Bluetooth Low Energy</h2>
@@ -970,7 +974,7 @@ pre .xml .cdata {
     <section class="slide-content"><p><img src="images/ble-logo.png" alt="BLE logo" class="w-200"/></p>
 <ul>
 <li>Can constantly advertise presence</li>
-<li>And last years on batteries</li>
+<li>Can last years on coin cell batteries</li>
 <li>&lt; 100 kbps throughput (vs 2 Mbps)</li>
 </ul>
 </section>
@@ -985,25 +989,46 @@ pre .xml .cdata {
 </section>
   </div>
   <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><p class="media-container fill-h"><img src="images/bluetooth-profiles-etc.png" alt="BLE profiles etc."></p></section>
+  </div>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><p class="media-container vertical-center fill-w"><img src="images/ble-characteristic-props.png" alt="BLE characteristic properties"></p></section>
+  </div>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><p class="media-container vertical-center fill-w"><img src="images/bybox-comms.png" alt="BLE comms"></p></section>
+  </div>
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h2 id="cordova">Cordova</h2>
 <p><img src="images/cordova-logo.png" alt="Cordova"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h2 id="cordova-plugin-ble-central">cordova-plugin-ble-central</h2>
-</section>
+<p class="media-container"><img src="images/cordova-plugin-ble-central.png" alt="cordova-plugin-ble-centra"></p></section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><ul class="long-list">
+  <li>startScan</li>
+  <li>stopScan</li>
+  <li>connect</li>
+  <li>disconnect</li>
+  <li>read</li>
+  <li>write</li>
+  <li>startNotification</li>
+  <li>stopNotification ...</li>
+</ul></section>
+  </div>
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h2 id="react-native">React Native</h2>
 <p><img src="images/react-logo.png" alt="React Native"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h2 id="web-bluetooth">Web Bluetooth</h2>
 <p><img src="images/ble-logo.png" alt="BLE logo" class="w-300"/></p>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-16">
+  <div class="slide hidden author-slide" id="slide-20">
     <section class="slide-content"><div class="author">
   <h1 class="name">Thank you.</h1>
     <h3 class="twitter">

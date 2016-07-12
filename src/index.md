@@ -45,7 +45,7 @@ controls: false
 --
 
 <p class="media-container fill-h">![ByBox](images/bybox-stockonnect.gif)</p>
-<p class="caption">[ByBox Stockonnect](https://www.bybox.com/)</p>
+<p class="caption">[ByBox Stockonnect, with help from pebble {code}](https://www.bybox.com/)</p>
 
 --
 
@@ -58,7 +58,7 @@ controls: false
 <img src="images/ble-logo.png" alt="BLE logo" class="w-200"/>
 
 * Can constantly advertise presence
-* And last years on batteries
+* Can last years on coin cell batteries
 * < 100 kbps throughput (vs 2 Mbps)
 
 --
@@ -71,6 +71,18 @@ controls: false
 
 --
 
+<p class="media-container fill-h">![BLE profiles etc.](images/bluetooth-profiles-etc.png)</p>
+
+--
+
+<p class="media-container vertical-center fill-w">![BLE characteristic properties](images/ble-characteristic-props.png)</p>
+
+--
+
+<p class="media-container vertical-center fill-w">![BLE comms](images/bybox-comms.png)</p>
+
+--
+
 ## Cordova
 
 ![Cordova](images/cordova-logo.png)
@@ -78,6 +90,21 @@ controls: false
 --
 
 ## cordova-plugin-ble-central
+
+<p class="media-container">![cordova-plugin-ble-centra](images/cordova-plugin-ble-central.png)</p>
+
+--
+
+<ul class="long-list">
+  <li>startScan</li>
+  <li>stopScan</li>
+  <li>connect</li>
+  <li>disconnect</li>
+  <li>read</li>
+  <li>write</li>
+  <li>startNotification</li>
+  <li>stopNotification ...</li>
+</ul>
 
 --
 
