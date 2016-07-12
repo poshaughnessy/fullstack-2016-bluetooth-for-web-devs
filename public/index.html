@@ -672,7 +672,7 @@ h3 {
 
 ul {
   margin: 0;
-  padding: 0 45px 0 0;
+  padding: 0 0 0 45px;
   font-weight: 200;
   line-height: 1.4;
   font-size: 1.15em;
@@ -689,16 +689,14 @@ li {
 }
 
 blockquote {
-  padding-left: 20px;
-  margin-left: 0;
-  background: #272822;
-  border-left: 5px solid #efefef;
-  border-radius: 0 3px 3px 0;
-}
-
-blockquote p {
-  padding: .5em;
-  color: #efefef;
+  color: #444;
+  font-style: italic;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 
 .left {
@@ -767,6 +765,7 @@ hr {
 pre {
   font-size: 75%;
   line-height: 1.3;
+  text-align: left;
 }
 
 table td,
@@ -804,10 +803,8 @@ table th {
 
 /* Code Highlighting */
 code {
-  padding: .1em .35em;
   font-family: 'Fira Mono', Courier, sans-serif;
-  color: #fafafa;
-  background-color: #272822;
+  color: #333;
   border-radius: 3px;
 }
 
@@ -817,7 +814,7 @@ pre code {
   font-family: 'Fira Mono', Courier, sans-serif;
   font-weight: 400;
   overflow-y: hidden;
-  background: #272822;
+  background: transparent;
 }
 
 pre .tag,
@@ -835,7 +832,7 @@ pre .tex .special {
 }
 
 pre code {
-  color: #75715e;
+  color: #333;
 }
 
 pre code .constant {
@@ -962,15 +959,11 @@ pre .xml .cdata {
 <p class="caption"><a href="http://www.pokemongo.com/en-us/pokemon-go-plus/">Pokemon Go Plus watch</a></p></section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><p class="media-container fill-h"><img src="images/bybox-stockonnect.gif" alt="ByBox"></p>
-<p class="caption"><a href="https://www.bybox.com/">ByBox Stockonnect, with help from pebble {code}</a></p></section>
-  </div>
-  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h2 id="bluetooth-low-energy">Bluetooth Low Energy</h2>
 <p><img src="images/ble-phone.png" alt="BLE"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><p><img src="images/ble-logo.png" alt="BLE logo" class="w-200"/></p>
 <ul>
 <li>Can constantly advertise presence</li>
@@ -979,7 +972,33 @@ pre .xml .cdata {
 </ul>
 </section>
   </div>
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><p class="media-container fill-h"><img src="images/bluetooth-profiles-etc.png" alt="BLE profiles etc."></p></section>
+  </div>
   <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><p class="media-container vertical-center fill-w"><img src="images/ble-characteristic-props.png" alt="BLE characteristic properties"></p></section>
+  </div>
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h2 id="comms-based-on-hex">Comms based on Hex</h2>
+<ul>
+<li><code>0xff === 255</code></li>
+<li><code>parseInt(&#39;ff&#39;, 16) === 255</code></li>
+<li>Uint8Array useful for data buffers</li>
+<li>We&#39;ve started: <a href="https://github.com/pebblecode/hex-utils">github.com/pebblecode/hex-utils</a></li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><h2 class="vertical-center">Here&#39;s one I helped make earlier...</h2></section>
+  </div>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><p class="media-container fill-h"><img src="images/bybox-stockonnect.gif" alt="ByBox"></p>
+<p class="caption"><a href="https://www.bybox.com/">ByBox Stockonnect, with help from pebble {code}</a></p></section>
+  </div>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><p class="media-container vertical-center fill-w"><img src="images/bybox-comms.png" alt="BLE comms"></p></section>
+  </div>
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h2 id="javascript-friendly-options">JavaScript-friendly options</h2>
 <ul>
 <li>Cordova</li>
@@ -988,25 +1007,16 @@ pre .xml .cdata {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><p class="media-container fill-h"><img src="images/bluetooth-profiles-etc.png" alt="BLE profiles etc."></p></section>
-  </div>
-  <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><p class="media-container vertical-center fill-w"><img src="images/ble-characteristic-props.png" alt="BLE characteristic properties"></p></section>
-  </div>
-  <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><p class="media-container vertical-center fill-w"><img src="images/bybox-comms.png" alt="BLE comms"></p></section>
-  </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h2 id="cordova">Cordova</h2>
 <p><img src="images/cordova-logo.png" alt="Cordova"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h2 id="cordova-plugin-ble-central">cordova-plugin-ble-central</h2>
 <p class="media-container"><img src="images/cordova-plugin-ble-central.png" alt="cordova-plugin-ble-centra"></p></section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><ul class="long-list">
   <li>startScan</li>
   <li>stopScan</li>
@@ -1018,17 +1028,92 @@ pre .xml .cdata {
   <li>stopNotification ...</li>
 </ul></section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onDeviceReady</span>(<span class="hljs-params"></span>) </span>{
+ <span class="hljs-comment">// Scan for Bluetooth devices</span>
+ ble.scan([], <span class="hljs-number">5</span>, onDiscoverDevice, onError);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onDiscoverDevice</span>(<span class="hljs-params">device</span>) </span>{
+
+ <span class="hljs-keyword">let</span> listItem = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+ listItem.innerHTML = <span class="hljs-string">`&lt;p&gt;<span class="hljs-subst">${device.name}</span>&lt;/p&gt;`</span>;
+ listItem.onclick = connect(device.id);
+
+ deviceList.appendChild(listItem);
+
+}</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">connect</span>(<span class="hljs-params">deviceId</span>) </span>{
+ currentDeviceId = deviceId;
+ ble.connect(deviceId, onConnect, onError);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onConnect</span>(<span class="hljs-params"></span>) </span>{
+ ble.startNotification(currentDeviceId, 
+    BATTERY_SERVICE, BATTERY_CHARACTERISTIC, 
+    onBatteryLevelChange, onError);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onBatteryLevelChange</span>(<span class="hljs-params">dataBuffer</span>) </span>{
+ <span class="hljs-keyword">let</span> bytes = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(dataBuffer);
+ batteryState.innerHTML = bytes[<span class="hljs-number">0</span>];
+}</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h2 id="react-native">React Native</h2>
 <p><img src="images/react-logo.png" alt="React Native"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h2 id="react-native-ble">react-native-ble</h2>
+<p class="media-container"><img src="images/react-native-ble.png" alt="react-native-ble"></p></section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h2 id="react-native-cordova-plugin">react-native-cordova-plugin</h2>
+<p class="media-container"><img src="images/react-native-cordova-plugin.png" alt="react-native-cordova-plugin"></p></section>
+  </div>
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h2 id="web-bluetooth">Web Bluetooth</h2>
 <p><img src="images/ble-logo.png" alt="BLE logo" class="w-300"/></p>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-20">
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h2 class="vertical-center">Testing</h2></section>
+  </div>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><blockquote>
+<p>“This is a short list of issues you will encounter if you try to use native Android BLE...”</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-28">
+    <section class="slide-content"><p class="media-container fill-h"><img src="images/sweetblue.png" alt="Sweetblue"></p>
+<p class="caption"><a href="http://bit.ly/sweetblue-android">bit.ly/sweetblue-android</a></p></section>
+  </div>
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><div class="vertical-center">
+  <ul>
+      <li>Start with a small list of supported devices</li>
+      <li>Allow lots of time for device testing</li>
+  </ul>
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-30">
+    <section class="slide-content"><p class="media-container"><img src="images/cysmart.png" alt="CySmart"></p>
+<p class="caption">CySmart with CySmart BLE dongle</p></section>
+  </div>
+  <div class="slide hidden" id="slide-31">
+    <section class="slide-content"><p class="media-container"><img src="images/adafruit-ble-sniff.jpg" alt="Wireshark"></p>
+<p class="caption">Wireshark with Bluefruit BLE sniffer</p></section>
+  </div>
+  <div class="slide hidden" id="slide-32">
+    <section class="slide-content"></section>
+  </div>
+  <div class="slide hidden author-slide" id="slide-33">
     <section class="slide-content"><div class="author">
   <h1 class="name">Thank you.</h1>
     <h3 class="twitter">

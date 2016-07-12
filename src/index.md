@@ -44,11 +44,6 @@ controls: false
 
 --
 
-<p class="media-container fill-h">![ByBox](images/bybox-stockonnect.gif)</p>
-<p class="caption">[ByBox Stockonnect, with help from pebble {code}](https://www.bybox.com/)</p>
-
---
-
 ## Bluetooth Low Energy
 
 ![BLE](images/ble-phone.png)
@@ -63,14 +58,6 @@ controls: false
 
 --
 
-## JavaScript-friendly options
-
-* Cordova
-* React Native
-* Web Bluetooth
-
---
-
 <p class="media-container fill-h">![BLE profiles etc.](images/bluetooth-profiles-etc.png)</p>
 
 --
@@ -79,7 +66,33 @@ controls: false
 
 --
 
+## Comms based on Hex
+
+* `0xff === 255`
+* `parseInt('ff', 16) === 255`
+* Uint8Array useful for data buffers
+* We've started: [github.com/pebblecode/hex-utils](https://github.com/pebblecode/hex-utils)
+
+--
+
+<h2 class="vertical-center">Here's one I helped make earlier...</h2> 
+
+--
+
+<p class="media-container fill-h">![ByBox](images/bybox-stockonnect.gif)</p>
+<p class="caption">[ByBox Stockonnect, with help from pebble {code}](https://www.bybox.com/)</p>
+
+--
+
 <p class="media-container vertical-center fill-w">![BLE comms](images/bybox-comms.png)</p>
+
+--
+
+## JavaScript-friendly options
+
+* Cordova
+* React Native
+* Web Bluetooth
 
 --
 
@@ -108,14 +121,99 @@ controls: false
 
 --
 
+```javascript
+function onDeviceReady() {
+ // Scan for Bluetooth devices
+ ble.scan([], 5, onDiscoverDevice, onError);
+}
+
+function onDiscoverDevice(device) {
+
+ let listItem = document.createElement('li');
+ listItem.innerHTML = `<p>${device.name}</p>`;
+ listItem.onclick = connect(device.id);
+
+ deviceList.appendChild(listItem);
+
+}
+```
+
+--
+
+```javascript
+function connect(deviceId) {
+ currentDeviceId = deviceId;
+ ble.connect(deviceId, onConnect, onError);
+}
+
+function onConnect() {
+ ble.startNotification(currentDeviceId, 
+    BATTERY_SERVICE, BATTERY_CHARACTERISTIC, 
+    onBatteryLevelChange, onError);
+}
+
+function onBatteryLevelChange(dataBuffer) {
+ let bytes = new Uint8Array(dataBuffer);
+ batteryState.innerHTML = bytes[0];
+}
+```
+
+--
+
 ## React Native
 
 ![React Native](images/react-logo.png)
 
 --
 
+## react-native-ble
+
+<p class="media-container">![react-native-ble](images/react-native-ble.png)</p>
+
+--
+
+## react-native-cordova-plugin
+
+<p class="media-container">![react-native-cordova-plugin](images/react-native-cordova-plugin.png)</p>
+
+--
+
 ## Web Bluetooth
 
 <img src="images/ble-logo.png" alt="BLE logo" class="w-300"/>
+
+--
+
+<h2 class="vertical-center">Testing</h2>
+
+--
+
+> “This is a short list of issues you will encounter if you try to use native Android BLE...”
+
+--
+
+<p class="media-container fill-h">![Sweetblue](images/sweetblue.png)</p>
+<p class="caption">[bit.ly/sweetblue-android](http://bit.ly/sweetblue-android)</p>
+
+--
+
+<div class="vertical-center">
+  <ul>
+      <li>Start with a small list of supported devices</li>
+      <li>Allow lots of time for device testing</li>
+  </ul>
+</div>  
+
+--
+
+<p class="media-container">![CySmart](images/cysmart.png)</p>
+<p class="caption">CySmart with CySmart BLE dongle</p>
+
+--
+
+<p class="media-container">![Wireshark](images/adafruit-ble-sniff.jpg)</p>
+<p class="caption">Wireshark with Bluefruit BLE sniffer</p>
+
+--
 
 
