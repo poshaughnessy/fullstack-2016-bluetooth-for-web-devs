@@ -205,19 +205,18 @@ let options = {filters: [{
                  services: ['battery_service'] }] };
                  
 navigator.bluetooth.requestDevice(options)
-  .then(device => {
-    console.log(device.name);
-    device.connectGATT();
-  })
-  
-  ...
 ```
+
+--
+
+<p class="media-container">![Bluetooth pairing screen](images/bluetooth-device-chooser.png)</p>
 
 --
 
 ```javascript
   ...
   
+  .then(device => device.connectGATT())  
   .then(server =>
     server.getPrimaryService('battery_service'))
   .then(service =>
@@ -279,7 +278,7 @@ navigator.bluetooth.requestDevice(options)
 
 <div class="vertical-center">
     <h2>In case of demo fail</h2>
-    [https://youtu.be/-FO9thLaiug](https://youtu.be/-FO9thLaiug)
+    [bit.ly/web-bluetooth-drone-video](https://youtu.be/-FO9thLaiug)
 </div>
 
 --

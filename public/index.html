@@ -1102,18 +1102,16 @@ pre .xml .cdata {
     <section class="slide-content"><pre><code class="lang-javascript"><span class="hljs-keyword">let</span> options = {filters: [{
                  services: [<span class="hljs-string">'battery_service'</span>] }] };
 
-navigator.bluetooth.requestDevice(options)
-  .then(device =&gt; {
-    <span class="hljs-built_in">console</span>.log(device.name);
-    device.connectGATT();
-  })
-
-  ...</code></pre>
+navigator.bluetooth.requestDevice(options)</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><p class="media-container"><img src="images/bluetooth-device-chooser.png" alt="Bluetooth pairing screen"></p></section>
+  </div>
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><pre><code class="lang-javascript">  ...
 
+  .then(device =&gt; device.connectGATT())  
   .then(server =&gt;
     server.getPrimaryService(<span class="hljs-string">'battery_service'</span>))
   .then(service =&gt;
@@ -1128,20 +1126,20 @@ navigator.bluetooth.requestDevice(options)
   });</code></pre>
 <div class="caption"><a href="http://bit.ly/chrome-bluetooth-guide">bit.ly/chrome-bluetooth-guide</a></div></section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h2 class="vertical-center">Testing</h2></section>
   </div>
-  <div class="slide hidden" id="slide-31">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><blockquote>
 <p>“This is a short list of issues you will encounter if you try to use native Android BLE...”</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-32">
+  <div class="slide hidden" id="slide-33">
     <section class="slide-content"><p class="media-container fill-h"><img src="images/sweetblue.png" alt="Sweetblue"></p>
 <p class="caption"><a href="http://bit.ly/sweetblue-android">bit.ly/sweetblue-android</a></p></section>
   </div>
-  <div class="slide hidden" id="slide-33">
+  <div class="slide hidden" id="slide-34">
     <section class="slide-content"><div class="vertical-center">
   <ul>
       <li>Start with a small list of supported devices</li>
@@ -1149,31 +1147,31 @@ navigator.bluetooth.requestDevice(options)
   </ul>
 </div></section>
   </div>
-  <div class="slide hidden" id="slide-34">
+  <div class="slide hidden" id="slide-35">
     <section class="slide-content"><p class="media-container"><img src="images/cysmart.png" alt="CySmart"></p>
 <p class="caption">CySmart with CySmart BLE dongle</p></section>
   </div>
-  <div class="slide hidden" id="slide-35">
+  <div class="slide hidden" id="slide-36">
     <section class="slide-content"><p class="media-container"><img src="images/adafruit-ble-sniff.jpg" alt="Wireshark"></p>
 <p class="caption">Wireshark with Bluefruit BLE sniffer</p></section>
   </div>
-  <div class="slide hidden" id="slide-36">
+  <div class="slide hidden" id="slide-37">
     <section class="slide-content"><h2 class="vertical-center">Demo time</h2></section>
   </div>
-  <div class="slide hidden" id="slide-37">
+  <div class="slide hidden" id="slide-38">
     <section class="slide-content"><p class="media-container"><img src="images/web-drone-screenshot.png" alt="web-bluetooth-parrot-drone"></p>
 <p class="caption"><a href="http://bit.ly/web-bluetooth-drone">bit.ly/web-bluetooth-drone</a></p></section>
   </div>
-  <div class="slide hidden" id="slide-38">
+  <div class="slide hidden" id="slide-39">
     <section class="slide-content"><div class="vertical-center">
     <h2>In case of demo fail</h2>
-    <a href="https://youtu.be/-FO9thLaiug"><a href="https://youtu.be/-FO9thLaiug">https://youtu.be/-FO9thLaiug</a></a>
+    <a href="https://youtu.be/-FO9thLaiug">bit.ly/web-bluetooth-drone-video</a>
 </div></section>
   </div>
-  <div class="slide hidden" id="slide-39">
+  <div class="slide hidden" id="slide-40">
     <section class="slide-content"><h2 class="vertical-center">Code time</h2></section>
   </div>
-  <div class="slide hidden author-slide" id="slide-40">
+  <div class="slide hidden author-slide" id="slide-41">
     <section class="slide-content"><div class="author">
   <h1 class="name">Thank you.</h1>
     <h3 class="twitter">
