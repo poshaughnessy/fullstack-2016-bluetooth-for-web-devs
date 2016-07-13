@@ -735,6 +735,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   margin: 0;
 }
@@ -1086,19 +1087,46 @@ pre .xml .cdata {
 <p class="caption">caniuse.com</p></section>
   </div>
   <div class="slide hidden" id="slide-27">
-    <section class="slide-content"><h2 class="vertical-center">Testing</h2></section>
+    <section class="slide-content"><ul>
+<li>Chrome for Android Dev</li>
+<li>Chrome OS</li>
+<li>Firefox OS</li>
+</ul>
+<p><img src="images/web-bluetooth-flag.png" alt="Web Bluetooth flag"></p>
+</section>
   </div>
   <div class="slide hidden" id="slide-28">
+    <section class="slide-content"><pre><code class="lang-javascript">navigator.bluetooth.requestDevice({filters: [{
+   services: [<span class="hljs-string">'battery_service'</span>] }] })
+ .then(device =&gt; device.connectGATT())
+ .then(server =&gt;
+   server.getPrimaryService(<span class="hljs-string">'battery_service'</span>))
+ .then(service =&gt;
+   service.getCharacteristic(<span class="hljs-string">'battery_level'</span>))
+ .then(characteristic =&gt; {
+   <span class="hljs-comment">// Read battery level</span>
+   <span class="hljs-keyword">return</span> characteristic.readValue();
+ })
+ .then(value =&gt; {
+   value = value.buffer ? value : <span class="hljs-keyword">new</span> <span class="hljs-built_in">DataView</span>(value);
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Battery level: <span class="hljs-subst">${value.getUint8(0)}</span>`</span>);
+ });</code></pre>
+<div class="caption"><a href="http://bit.ly/chrome-bluetooth-guide">bit.ly/chrome-bluetooth-guide</a></div></section>
+  </div>
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><h2 class="vertical-center">Testing</h2></section>
+  </div>
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><blockquote>
 <p>“This is a short list of issues you will encounter if you try to use native Android BLE...”</p>
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><p class="media-container fill-h"><img src="images/sweetblue.png" alt="Sweetblue"></p>
 <p class="caption"><a href="http://bit.ly/sweetblue-android">bit.ly/sweetblue-android</a></p></section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><div class="vertical-center">
   <ul>
       <li>Start with a small list of supported devices</li>
@@ -1106,18 +1134,30 @@ pre .xml .cdata {
   </ul>
 </div></section>
   </div>
-  <div class="slide hidden" id="slide-31">
+  <div class="slide hidden" id="slide-33">
     <section class="slide-content"><p class="media-container"><img src="images/cysmart.png" alt="CySmart"></p>
 <p class="caption">CySmart with CySmart BLE dongle</p></section>
   </div>
-  <div class="slide hidden" id="slide-32">
+  <div class="slide hidden" id="slide-34">
     <section class="slide-content"><p class="media-container"><img src="images/adafruit-ble-sniff.jpg" alt="Wireshark"></p>
 <p class="caption">Wireshark with Bluefruit BLE sniffer</p></section>
   </div>
-  <div class="slide hidden" id="slide-33">
-    <section class="slide-content"></section>
+  <div class="slide hidden" id="slide-35">
+    <section class="slide-content"><div class="vertical-center">
+    <h2>Enough <em>droning</em> on...</h2>
+</div></section>
   </div>
-  <div class="slide hidden author-slide" id="slide-34">
+  <div class="slide hidden" id="slide-36">
+    <section class="slide-content"><p class="media-container"><img src="images/web-drone-screenshot.png" alt="web-bluetooth-parrot-drone"></p>
+<p class="caption"><a href="http://bit.ly/web-bluetooth-drone">bit.ly/web-bluetooth-drone</a></p></section>
+  </div>
+  <div class="slide hidden" id="slide-37">
+    <section class="slide-content"><div class="vertical-center">
+    <h2>In case of demo fail</h2>
+    <a href="https://youtu.be/-FO9thLaiug"><a href="https://youtu.be/-FO9thLaiug">https://youtu.be/-FO9thLaiug</a></a>
+</div></section>
+  </div>
+  <div class="slide hidden author-slide" id="slide-38">
     <section class="slide-content"><div class="author">
   <h1 class="name">Thank you.</h1>
     <h3 class="twitter">

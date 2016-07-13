@@ -189,6 +189,36 @@ function onBatteryLevelChange(dataBuffer) {
 
 --
 
+* Chrome for Android Dev
+* Chrome OS
+* Firefox OS
+
+![Web Bluetooth flag](images/web-bluetooth-flag.png)
+
+--
+
+```javascript
+navigator.bluetooth.requestDevice({filters: [{
+   services: ['battery_service'] }] })
+ .then(device => device.connectGATT())
+ .then(server =>
+   server.getPrimaryService('battery_service'))
+ .then(service =>
+   service.getCharacteristic('battery_level'))
+ .then(characteristic => {
+   // Read battery level
+   return characteristic.readValue();
+ })
+ .then(value => {
+   value = value.buffer ? value : new DataView(value);
+   console.log(`Battery level: ${value.getUint8(0)}`);
+ });
+```
+
+<div class="caption">[bit.ly/chrome-bluetooth-guide](http://bit.ly/chrome-bluetooth-guide)</div>
+
+--
+
 <h2 class="vertical-center">Testing</h2>
 
 --
@@ -221,4 +251,18 @@ function onBatteryLevelChange(dataBuffer) {
 
 --
 
+<div class="vertical-center">
+    <h2>Enough <em>droning</em> on...</h2>
+</div>
 
+--
+
+<p class="media-container">![web-bluetooth-parrot-drone](images/web-drone-screenshot.png)</p>
+<p class="caption">[bit.ly/web-bluetooth-drone](http://bit.ly/web-bluetooth-drone)</p>
+
+--
+
+<div class="vertical-center">
+    <h2>In case of demo fail</h2>
+    [https://youtu.be/-FO9thLaiug](https://youtu.be/-FO9thLaiug)
+</div>
