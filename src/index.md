@@ -184,8 +184,10 @@ function onBatteryLevelChange(dataBuffer) {
 
 --
 
-![caniuse.com](images/web-bluetooth-caniuse.png)
-<p class="caption">caniuse.com</p>
+<div class="vertical-center">
+    ![caniuse.com](images/web-bluetooth-caniuse.png)
+    <p class="caption">caniuse.com</p>
+</div>
 
 --
 
