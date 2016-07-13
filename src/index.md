@@ -63,6 +63,7 @@ controls: false
 --
 
 <p class="media-container vertical-center fill-w">![BLE characteristic properties](images/ble-characteristic-props.png)</p>
+<p class="caption">Generic ATTribute profile (GATT)</p>
 
 --
 
@@ -200,21 +201,35 @@ function onBatteryLevelChange(dataBuffer) {
 --
 
 ```javascript
-navigator.bluetooth.requestDevice({filters: [{
-   services: ['battery_service'] }] })
- .then(device => device.connectGATT())
- .then(server =>
-   server.getPrimaryService('battery_service'))
- .then(service =>
-   service.getCharacteristic('battery_level'))
- .then(characteristic => {
-   // Read battery level
-   return characteristic.readValue();
- })
- .then(value => {
-   value = value.buffer ? value : new DataView(value);
-   console.log(`Battery level: ${value.getUint8(0)}`);
- });
+let options = {filters: [{
+                 services: ['battery_service'] }] };
+                 
+navigator.bluetooth.requestDevice(options)
+  .then(device => {
+    console.log(device.name);
+    device.connectGATT();
+  })
+  
+  ...
+```
+
+--
+
+```javascript
+  ...
+  
+  .then(server =>
+    server.getPrimaryService('battery_service'))
+  .then(service =>
+    service.getCharacteristic('battery_level'))
+  .then(characteristic => {
+    // Read battery level
+    return characteristic.readValue();
+  })
+  .then(value => {
+    let bytes = new Uint8Array(value.buffer);
+    console.log(`Battery level: ${bytes[0]}`);
+  });
 ```
 
 <div class="caption">[bit.ly/chrome-bluetooth-guide](http://bit.ly/chrome-bluetooth-guide)</div>
