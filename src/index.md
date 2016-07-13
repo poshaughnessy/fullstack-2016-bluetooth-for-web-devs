@@ -251,9 +251,7 @@ navigator.bluetooth.requestDevice({filters: [{
 
 --
 
-<div class="vertical-center">
-    <h2>Enough <em>droning</em> on...</h2>
-</div>
+<h2 class="vertical-center">Demo time</h2>
 
 --
 
@@ -266,3 +264,7 @@ navigator.bluetooth.requestDevice({filters: [{
     <h2>In case of demo fail</h2>
     [https://youtu.be/-FO9thLaiug](https://youtu.be/-FO9thLaiug)
 </div>
+
+--
+
+<h2 class="vertical-center">Code time</h2>
