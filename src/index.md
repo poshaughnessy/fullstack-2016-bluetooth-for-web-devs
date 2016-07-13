@@ -192,9 +192,10 @@ function onBatteryLevelChange(dataBuffer) {
 
 --
 
-* Chrome for Android
+* Chrome for Android (Marshmallow)
 * Chrome OS
 * Firefox OS
+* Opera
 
 ![Web Bluetooth flag](images/web-bluetooth-flag.png)
 
